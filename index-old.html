@@ -44,14 +44,11 @@
       padding: 0;
       scroll-behavior: smooth;
     }
-
-    ul,
-    ol {
+    ul, ol {
       margin-top: 10px;
       margin-bottom: 10px;
       /* padding-left: 10px; */
     }
-
     .card {
       background-color: var(--card-bg-color);
       border-radius: 10px;
@@ -378,15 +375,13 @@
   <!-- 新增Markdown编辑器库 -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="./resume.js"></script>
 </head>
 
 <body>
   <div class="button-container">
     <button id="download-pdf">下载简历PDF</button>
     <button id="preview-pdf">预览简历PDF</button>
-    <button id="preview-markdown">预览简历Markdown</button>
-    <button id="preview-md">添加 Markdown 预览</button>
+    <button id="preview-md">从 Markdown 预览</button>
     <!-- <button id="export-pdf">导出为 PDF</button>
     <button id="export-image">导出为图片</button> -->
   </div>
@@ -461,8 +456,7 @@
       <h2>项目经验</h2>
       <div class="timeline-item">
         <h3>轩辕传奇游戏营销活动体系建设</h3>
-        <p>项目背景：轩辕传奇游戏用户活跃度连续 3 个月下滑 15%，急需通过营销活动激活、拉新，传统活动开发需市场、设计、开发团队串行协作，活动平均迭代周期达 14 天，多渠道（PC/H5/WeGame/手Q/
-          微信）活动流水目标1500w</p>
+        <p>项目背景：轩辕传奇游戏用户活跃度连续 3 个月下滑 15%，急需通过营销活动激活、拉新，传统活动开发需市场、设计、开发团队串行协作，活动平均迭代周期达 14 天，多渠道（PC/H5/WeGame/手Q/ 微信）活动流水目标1500w</p>
         <p>个人职责：</p>
         <ul>
           <li>搭建全平台营销活动体系。制定轩辕传奇营销策略，快速推广新版本，开发多渠道的活动</li>
@@ -470,9 +464,7 @@
           <li>主导业务线提效。主导并落地低代码平台。实践基于私有组件库的AI搭建系统，储备业务的AI提效能力</li>
           <li>负责项目管理工作。包括：助力开发游戏版本，重要里程碑确认，运营埋点数据分析、优化游戏投放策略等</li>
         </ul>
-        <p>项目成果：在游戏活跃度降低的背景下，通过注入埋点sdk、A/B
-          测试、归因模型等数据分析方法，预测并优化了游戏投放策略，助力开发多个轩辕端游版本、手游热血版，策划南京阅江楼联动轩辕IP，转化端游前四的公会成员进入手游，促使游戏月均流水提升50%。通过低代码平台、通用运营模板，将通用营销活动上线周期从14天缩短至
-          4天</p>
+        <p>项目成果：在游戏活跃度降低的背景下，通过注入埋点sdk、A/B 测试、归因模型等数据分析方法，预测并优化了游戏投放策略，助力开发多个轩辕端游版本、手游热血版，策划南京阅江楼联动轩辕IP，转化端游前四的公会成员进入手游，促使游戏月均流水提升50%。通过低代码平台、通用运营模板，将通用营销活动上线周期从14天缩短至 4天</p>
       </div>
       <div class="timeline-item">
         <h3>TGF 等海外版游戏营销体系建设</h3>
@@ -483,9 +475,7 @@
           <li>负责海外数据分析系统搭建。优化埋点数据平台，接入海外游戏数据，分析海外活动数据，调整运营策略</li>
           <li>负责龙息神寂海外预热活动。开发预抽卡活动，吸引用户预约游戏、储备游戏资源</li>
         </ul>
-        <p>
-          项目成果：开发Discord\Twtich\Steam\Apple\Google等海外平台登录SDK，结合人拉人（2期）、主播狂欢夜（3期）营销活动，提高游戏曝光度、活跃度，7-9月连续三月Steam好评率前三，海外Twtich平台多名头部主播直播TGF游戏。开发龙息神寂海外版预抽卡，第一天预约用户100w，新型卡牌类游戏登上Discord讨论区热搜
-        </p>
+        <p>项目成果：开发Discord\Twtich\Steam\Apple\Google等海外平台登录SDK，结合人拉人（2期）、主播狂欢夜（3期）营销活动，提高游戏曝光度、活跃度，7-9月连续三月Steam好评率前三，海外Twtich平台多名头部主播直播TGF游戏。开发龙息神寂海外版预抽卡，第一天预约用户100w，新型卡牌类游戏登上Discord讨论区热搜</p>
       </div>
       <div class="timeline-item">
         <h3>虚拟世界</h3>
@@ -496,9 +486,7 @@
           <li>主导虚拟人运营工具开发。采用动态配置化表单，统一管理 PGC/UGC 内容，Pont自动生成 API，技术提效</li>
           <li>负责AI 场景的MVP版开发。分析数字人直播、AI养成系统等潜在场景。开发“西部小镇”、“永生” 产品的 MVP 版本</li>
         </ul>
-        <p>项目成果：设计虚拟人的经验价值清单原则，基于这个原则，完成DeepLearning运营平台，算法调试效率提升
-          30%，产出多个微调的垂类大模型，运营部门的session合格率提高了45%，解决LLM模型的五类问题。通过虚拟人运营工具提效，配置时间减少 50%。开发多个MVP版本，验证多个AI
-          落地场景，推动部门选择高价值AI业务方向</p>
+        <p>项目成果：设计虚拟人的经验价值清单原则，基于这个原则，完成DeepLearning运营平台，算法调试效率提升 30%，产出多个微调的垂类大模型，运营部门的session合格率提高了45%，解决LLM模型的五类问题。通过虚拟人运营工具提效，配置时间减少 50%。开发多个MVP版本，验证多个AI 落地场景，推动部门选择高价值AI业务方向</p>
       </div>
       <div class="timeline-item">
         <h3>TGF 等海外版游戏营销体系建设</h3>
@@ -509,9 +497,7 @@
           <li>负责海外数据分析系统搭建。优化埋点数据平台，接入海外游戏数据，分析海外活动数据，调整运营策略</li>
           <li>负责龙息神寂海外预热活动。开发预抽卡活动，吸引用户预约游戏、储备游戏资源</li>
         </ul>
-        <p>
-          项目成果：开发Discord\Twtich\Steam\Apple\Google等海外平台登录SDK，结合人拉人（2期）、主播狂欢夜（3期）营销活动，提高游戏曝光度、活跃度，7-9月连续三月Steam好评率前三，海外Twtich平台多名头部主播直播TGF游戏。开发龙息神寂海外版预抽卡，第一天预约用户100w，新型卡牌类游戏登上Discord讨论区热搜
-        </p>
+        <p>项目成果：开发Discord\Twtich\Steam\Apple\Google等海外平台登录SDK，结合人拉人（2期）、主播狂欢夜（3期）营销活动，提高游戏曝光度、活跃度，7-9月连续三月Steam好评率前三，海外Twtich平台多名头部主播直播TGF游戏。开发龙息神寂海外版预抽卡，第一天预约用户100w，新型卡牌类游戏登上Discord讨论区热搜</p>
       </div>
       <div class="timeline-item">
         <h3>云课堂直播</h3>
@@ -522,9 +508,7 @@
           <li>负责云课堂新版class-admin系统开发。分析旧的前后端耦合的业务功能，重构新版云课堂的admin管理系统</li>
           <li>负责class-ui、云课堂sdk开发。负责云课堂内class-ui互动组件，设计并开发设备检测模块，解决进入课堂难的问题，重构流媒体sdk上麦模块，解决直播卡顿延迟问题</li>
         </ul>
-        <p>
-          项目成果：设计并开发设备检测模块，解决了进入课堂难的问题，投诉率每100堂课下降30%，通过设备热插拔检测、编解码能力检测、动态调整音视频码率、自适应网络，解决无法上麦、直播卡顿延迟问题，拿下浙江海亮、深圳青豆辅导学校两个大客户
-        </p>
+        <p>项目成果：设计并开发设备检测模块，解决了进入课堂难的问题，投诉率每100堂课下降30%，通过设备热插拔检测、编解码能力检测、动态调整音视频码率、自适应网络，解决无法上麦、直播卡顿延迟问题，拿下浙江海亮、深圳青豆辅导学校两个大客户</p>
       </div>
       <div class="timeline-item">
         <h3>威视云</h3>
@@ -534,9 +518,7 @@
           <li>主导web端系统项目管理。确定里程碑节点、客户核心需求，协调Flexone智能审图资源，设计实现系统</li>
           <li>负责系统的go后端开发。负责开发云管理服务、AI配置管理服务、资源监控服务，处理底层K8s集群、OpenStack集群、Flexone智能审图服务数据</li>
         </ul>
-        <p>项目成果：带领2个前端，4个月内完成AI
-          识别配置管理系统、成都天府机场3D大屏展示系统，保证成都天府机场客户能实时检测、分配、规划云资源，通过机场中控室的3D展示，获取安检识别效果、过包情况、安检通道是否畅通，操作中心一键控制安检机，提高机场安检工作效率
-        </p>
+        <p>项目成果：带领2个前端，4个月内完成AI 识别配置管理系统、成都天府机场3D大屏展示系统，保证成都天府机场客户能实时检测、分配、规划云资源，通过机场中控室的3D展示，获取安检识别效果、过包情况、安检通道是否畅通，操作中心一键控制安检机，提高机场安检工作效率</p>
       </div>
       <div class="timeline-item">
         <h3>WEKNOW智能盒子</h3>
@@ -620,9 +602,94 @@
     document.getElementById('preview-pdf').addEventListener('click', function () {
       window.open('./吴少林-2025前端工程师-19910325138.pdf', '_blank');
     });
-    document.addEventListener('DOMContentLoaded', function () {
+    // document.getElementById('export-pdf').addEventListener('click', function () {
+    //   const card = document.getElementById('resume-card');
 
+    //   html2canvas(card, {
+    //     scale: 2,
+    //     useCORS: true,
+    //     allowTaint: true,
+    //     backgroundColor: "#ffffff",
+    //     onclone: function (clonedDoc) {
+    //       const clonedCard = clonedDoc.getElementById('resume-card');
+    //       // 确保进度条颜色
+    //       clonedDoc.querySelectorAll('.progress').forEach(progress => {
+    //         progress.style.backgroundColor = '#007BFF';
+    //         progress.style.color = 'white';
+    //       });
+    //       // 确保雷达图显示
+    //       const canvas = clonedDoc.querySelector('.radar-chart');
+    //       if (canvas) {
+    //         canvas.style.maxHeight = '300px';
+    //       }
+    //     }
+    //   }).then(canvas => {
+    //     const imgData = canvas.toDataURL('image/png');
+    //     const pdf = new jspdf.jsPDF({
+    //       orientation: 'portrait',
+    //       unit: 'px',
+    //       format: [canvas.width, canvas.height]
+    //     });
+
+    //     pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+    //     pdf.save('resume.pdf');
+    //   });
+    // });
+
+    // document.getElementById('export-image').addEventListener('click', function () {
+    //   const card = document.getElementById('resume-card');
+
+    //   html2canvas(card, {
+    //     scale: 2,
+    //     useCORS: true,
+    //     allowTaint: true,
+    //     backgroundColor: "#ffffff",
+    //     onclone: function (clonedDoc) {
+    //       const clonedCard = clonedDoc.getElementById('resume-card');
+    //       // 确保进度条颜色
+    //       clonedDoc.querySelectorAll('.progress').forEach(progress => {
+    //         progress.style.backgroundColor = '#007BFF';
+    //         progress.style.color = 'white';
+    //       });
+    //       // 确保雷达图显示
+    //       const canvas = clonedDoc.querySelector('.radar-chart');
+    //       if (canvas) {
+    //         canvas.style.maxHeight = '300px';
+    //       }
+    //     }
+    //   }).then(canvas => {
+    //     canvas.toBlob(blob => {
+    //       const link = document.createElement('a');
+    //       link.download = 'resume.png';
+    //       link.href = URL.createObjectURL(blob);
+    //       link.click();
+    //     }, 'image/png');
+    //   });
+    // });
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('preview-md').addEventListener('click', function () {
+        const previewHtmlOld = `
+        <div class="preview-container" style="display: flex: align-items: center; justify-content: center;">
+            <div class="editor-panel" style="height: 85vh;">
+                <textarea id="markdown-input" 
+                          placeholder="粘贴Markdown内容..." 
+                          style="width: 48%; height: 80%; margin: 20px 1%;"></textarea>
+                <div id="markdown-preview" 
+                     class="card" 
+                     style="width: 48%; height: 80%; overflow: auto; margin: 20px 1%;">
+                </div>
+                <div style="text-align: center; padding: 20px; width: 100%;">
+                    <button id="confirm-replace" 
+                            style="padding: 10px 20px; margin: 0 10px;">
+                        确认替换主内容
+                    </button>
+                    <button onclick="document.querySelector('.preview-container').remove()" 
+                            style="padding: 10px 20px; margin: 0 10px;">
+                        关闭
+                    </button>
+                </div>
+            </div>
+        </div>`;
         const previewHtml = `
           <div class="preview-container" style="display: flex: align-items: center; justify-content: center;">
               <div class="editor-panel">
@@ -682,48 +749,35 @@
           document.querySelector('.preview-container').remove();
         });
 
+        // 样式应用函数
+        function applyResumeStyles(container) {
+          // 为标题添加样式
+          container.querySelectorAll('h2').forEach(h2 => {
+            h2.className = 'section fade-in';
+            h2.innerHTML = `<span style="font-size: 24px;">${h2.textContent}</span>`;
+          });
+
+          // 为列表项添加时间线样式
+          container.querySelectorAll('ul, ol').forEach(ul => {
+            ul.className = 'timeline-item';
+            ul.querySelectorAll('li').forEach(li => {
+              li.style.margin = '10px 0';
+              li.style.lineHeight = '1.6';
+            });
+          });
+
+          // 为技能条添加进度样式
+          container.querySelectorAll('div:has(> .progress)').forEach(div => {
+            div.className = 'progress-bar';
+          });
+        }
+
         // 图表初始化函数
         function initCharts() {
           // 在此添加雷达图等初始化逻辑
         }
       });
-      document.getElementById('preview-markdown').addEventListener('click', function () {
-        // 页面加载时直接渲染 Markdown 内容
-        const resumeCard = document.getElementById('resume-card');
-        const newContent = document.createElement('div');
-        newContent.className = 'fade-in';
-        newContent.style.animationDuration = '0.5s';
-        newContent.innerHTML = marked.parse(resumeMD);  // 使用 resume.js 中的内容
-
-        // 应用样式规则
-        applyResumeStyles(newContent);
-
-        // 替换主内容
-        resumeCard.innerHTML = newContent.innerHTML;
-      })
     });
-    // 样式应用函数
-    function applyResumeStyles(container) {
-      // 为标题添加样式
-      container.querySelectorAll('h2').forEach(h2 => {
-        h2.className = 'section fade-in';
-        h2.innerHTML = `<span style="font-size: 24px;">${h2.textContent}</span>`;
-      });
-
-      // 为列表项添加时间线样式
-      container.querySelectorAll('ul, ol').forEach(ul => {
-        ul.className = 'timeline-item';
-        ul.querySelectorAll('li').forEach(li => {
-          li.style.margin = '10px 0';
-          li.style.lineHeight = '1.6';
-        });
-      });
-
-      // 为技能条添加进度样式
-      container.querySelectorAll('div:has(> .progress)').forEach(div => {
-        div.className = 'progress-bar';
-      });
-    }
   </script>
 </body>
 
