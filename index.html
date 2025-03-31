@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>王小明 - 个人简历</title>
+  <title>吴少林 - 个人简历</title>
   <!-- 新增打印样式表 -->
   <link rel="stylesheet" href="./style/print.css" media="print">
   <style>
@@ -276,10 +276,10 @@
     }
 
     .editor-panel {
-      width: 90%;
+      width: 80%;
       height: 90vh;
       margin: 5vh auto;
-      background: white;
+      background: #f0f2f5;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
@@ -323,7 +323,7 @@
       display: flex;
       height: calc(100vh - 120px);
       /* 留出底部空间 */
-      width: 90%;
+      width: 80%;
       margin: 20px auto;
       gap: 2%;
       position: relative;
@@ -374,24 +374,24 @@
     <button id="download-pdf">下载简历PDF</button>
     <button id="preview-pdf">预览简历PDF</button>
     <button id="preview-md">从 Markdown 预览</button>
-    <button id="export-pdf">导出为 PDF</button>
-    <button id="export-image">导出为图片</button>
+    <!-- <button id="export-pdf">导出为 PDF</button>
+    <button id="export-image">导出为图片</button> -->
   </div>
   <div class="card" id="resume-card">
     <div class="header">
       <img class="avatar"
         src="https://p3-flow-imagex-sign.byteimg.com/ocean-cloud-tos/image_generation/459c82913030032351c934812b7ddd09_1741676356514132792.png~tplv-a9rns2rl98-image.png?rk3s=25bff839&x-expires=1773212356&x-signature=OvpjH6KB8ArCF44r9%2FHy91n%2BKCQ%3D"
-        alt="王小明">
+        alt="吴少林">
       <div class="name-contact">
-        <div class="name">王小明</div>
-        <div class="position">全栈工程师</div>
+        <div class="name">吴少林</div>
+        <div class="position">前端工程师</div>
         <div class="contact">
-          <a href="tel:13800138000"><i class="fa-solid fa-phone"></i> 电话: 13800138000</a>
-          <a href="mailto:wangxiaoming@example.com"><i class="fa-solid fa-envelope"></i> 邮箱:
-            wangxiaoming@example.com</a>
-          <a href="#"><i class="fa-brands fa-weixin"></i> 微信: wangxiaomingwx</a>
-          <a href="https://github.com/wangxiaoming"><i class="fa-brands fa-github"></i> GitHub: wangxiaoming</a>
-          <a href="https://www.zhihu.com/people/wangxiaoming"><i class="fa-brands fa-zhihu"></i> 知乎: 王小明</a>
+          <a href="tel:199-1032-5138"><i class="fa-solid fa-phone"></i> 电话: 199-1032-5138</a>
+          <a href="mailto:wslsdust@163.com"><i class="fa-solid fa-envelope"></i> 邮箱:
+            wslsdust@163.com</a>
+          <a href="#"><i class="fa-brands fa-weixin"></i> 微信: shawnwwu</a>
+          <a href="https://github.com/codevvvv9"><i class="fa-brands fa-github"></i> codevvvv9</a>
+          <a href="https://vvushaolin.com"><i class="fa-solid fa-blog"></i> Blog</a>
         </div>
       </div>
     </div>
@@ -561,114 +561,41 @@
     //     pdf.save('resume.pdf');
     //   });
     // });
-    document.getElementById('export-pdf').addEventListener('click', function () {
-    const card = document.getElementById('resume-card');
     
-    // 临时调整样式以适应PDF
-    const originalStyle = card.style.cssText;
-    card.style.cssText = `
-        width: 800px !important;
-        margin: 0 auto !important;
-        padding: 20px !important;
-        box-sizing: border-box !important;
-    `;
-    
-    html2canvas(card, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: "#ffffff",
-        windowWidth: 800,
-        windowHeight: card.scrollHeight,
-        onclone: function(clonedDoc) {
-            const clonedCard = clonedDoc.getElementById('resume-card');
-            // 确保克隆元素样式正确
-            clonedCard.style.cssText = `
-                width: 800px !important;
-                margin: 0 !important;
-                padding: 20px !important;
-                box-sizing: border-box !important;
-            `;
-            
-            // 确保所有内容都能正确显示
-            clonedDoc.querySelectorAll('.section').forEach(section => {
-                section.style.width = '100%';
-                section.style.margin = '0 0 20px 0';
-            });
-        }
-    }).then(canvas => {
-        // 使用A4比例计算PDF尺寸
-        const imgWidth = 595.28;  // A4宽度，单位pt
-        const imgHeight = 841.89; // A4高度，单位pt
-        const pageHeight = (imgWidth / canvas.width) * canvas.height;
-        
-        // 创建PDF
-        const pdf = new jspdf.jsPDF({
-            orientation: 'portrait',
-            unit: 'pt',
-            format: 'a4'
-        });
-        
-        // 计算页数
-        const pageCount = Math.ceil(pageHeight / imgHeight);
-        
-        // 分页添加内容
-        for (let i = 0; i < pageCount; i++) {
-            if (i > 0) {
-                pdf.addPage();
-            }
-            
-            const position = -imgHeight * i;
-            pdf.addImage(
-                canvas.toDataURL('image/png'),
-                'PNG',
-                0,
-                position,
-                imgWidth,
-                pageHeight
-            );
-        }
-        
-        pdf.save('resume.pdf');
-        
-        // 恢复原始样式
-        card.style.cssText = originalStyle;
-    });
-});
-    document.getElementById('export-image').addEventListener('click', function () {
-      const card = document.getElementById('resume-card');
+    // document.getElementById('export-image').addEventListener('click', function () {
+    //   const card = document.getElementById('resume-card');
 
-      html2canvas(card, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: "#ffffff",
-        onclone: function (clonedDoc) {
-          const clonedCard = clonedDoc.getElementById('resume-card');
-          // 确保进度条颜色
-          clonedDoc.querySelectorAll('.progress').forEach(progress => {
-            progress.style.backgroundColor = '#007BFF';
-            progress.style.color = 'white';
-          });
-          // 确保雷达图显示
-          const canvas = clonedDoc.querySelector('.radar-chart');
-          if (canvas) {
-            canvas.style.maxHeight = '300px';
-          }
-        }
-      }).then(canvas => {
-        canvas.toBlob(blob => {
-          const link = document.createElement('a');
-          link.download = 'resume.png';
-          link.href = URL.createObjectURL(blob);
-          link.click();
-        }, 'image/png');
-      });
-    });
+    //   html2canvas(card, {
+    //     scale: 2,
+    //     useCORS: true,
+    //     allowTaint: true,
+    //     backgroundColor: "#ffffff",
+    //     onclone: function (clonedDoc) {
+    //       const clonedCard = clonedDoc.getElementById('resume-card');
+    //       // 确保进度条颜色
+    //       clonedDoc.querySelectorAll('.progress').forEach(progress => {
+    //         progress.style.backgroundColor = '#007BFF';
+    //         progress.style.color = 'white';
+    //       });
+    //       // 确保雷达图显示
+    //       const canvas = clonedDoc.querySelector('.radar-chart');
+    //       if (canvas) {
+    //         canvas.style.maxHeight = '300px';
+    //       }
+    //     }
+    //   }).then(canvas => {
+    //     canvas.toBlob(blob => {
+    //       const link = document.createElement('a');
+    //       link.download = 'resume.png';
+    //       link.href = URL.createObjectURL(blob);
+    //       link.click();
+    //     }, 'image/png');
+    //   });
+    // });
     document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('preview-md').addEventListener('click', function () {
         const previewHtmlOld = `
-        <div class="preview-container" style="display: block;">
+        <div class="preview-container" style="display: flex: align-items: center; justify-content: center;">
             <div class="editor-panel" style="height: 85vh;">
                 <textarea id="markdown-input" 
                           placeholder="粘贴Markdown内容..." 
@@ -690,7 +617,7 @@
             </div>
         </div>`;
         const previewHtml = `
-          <div class="preview-container" style="display: block;">
+          <div class="preview-container" style="display: flex: align-items: center; justify-content: center;">
               <div class="editor-panel">
                   <div class="editor-content" style="box-sizing: border-box;display: flex; width: 100%; height: calc(100% - 80px);">
                       <textarea id="markdown-input" 
