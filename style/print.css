@@ -1,0 +1,42 @@
+/* @media print {
+    :root {
+        --card-bg-color: white !important;
+        --text-color: #333 !important;
+        --progress-bg-color: #e9ecef !important;
+    }
+    
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: white !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 20px !important;
+    }
+    
+    .progress {
+        background-color: var(--progress-bar-color) !important;
+    }
+} */
+@media print {
+  * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+  }
+  
+  .progress {
+      background-color: #007BFF !important;
+      color: white !important;
+  }
+  
+  .progress-bar {
+      background-color: #e9ecef !important;
+  }
+  
+  .radar-chart {
+      max-height: 300px !important;
+  }
+}
