@@ -386,6 +386,7 @@
     <button id="download-pdf">下载简历PDF</button>
     <button id="preview-pdf">预览简历PDF</button>
     <button id="preview-markdown">预览简历Markdown</button>
+    <button id="preview-web">预览简历Web版</button>
     <button id="preview-md">添加 Markdown 预览</button>
     <!-- <button id="export-pdf">导出为 PDF</button>
     <button id="export-image">导出为图片</button> -->
@@ -620,6 +621,10 @@
     document.getElementById('preview-pdf').addEventListener('click', function () {
       window.open('./吴少林-2025前端工程师-19910325138.pdf', '_blank');
     });
+    document.getElementById('preview-web').addEventListener('click', function () {
+      // 页面刷新
+      window.location.reload();
+    });
     document.addEventListener('DOMContentLoaded', function () {
 
       document.getElementById('preview-md').addEventListener('click', function () {
@@ -628,7 +633,15 @@
               <div class="editor-panel">
                   <div class="editor-content" style="box-sizing: border-box;display: flex; width: 100%; height: calc(100% - 80px);">
                       <textarea id="markdown-input" 
-                          placeholder="粘贴Markdown内容..." 
+                          placeholder="🥳粘贴新的简历内容，😆甚至是普通Markdown内容都可以...
+接下来请开始你的表演！🎤
+# 我叫xxx
+
+## 个人信息
+- 电话：199-1032-5138
+- 邮箱：wslsdust@163.com
+- GitHub：codevvvv9
+- 博客：https://vvushaolin.com" 
                           style="flex: 1; margin: 10px; padding: 10px; border: 2px solid #dee2e6; border-radius: 8px; font-size: 14px; resize: none;"></textarea>
                       <div id="markdown-preview" 
                           class="card" 
